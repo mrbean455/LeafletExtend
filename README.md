@@ -1,2 +1,24 @@
-# LeafletExtend
-一些自己封装的基于leaflet或者基于leaflet+Vue的小插件
+# myleafletmarker
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
