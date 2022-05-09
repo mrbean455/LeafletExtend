@@ -1,12 +1,18 @@
 import * as L from  'leaflet'
 import Vue from 'vue'
-
+/**
+	参数1:要加载的组件 type:Object
+	参数2:popup的参数选项 type:Object
+ */
 L.Marker.include({
     popupPlus:function(targetCopm,options){
 		console.log(targetCopm,'t')
 		return new popupplus(targetCopm,options,this)
 	}
 })
+/*
+		方法1：加载页面时，把组件加载了（执行代码即加载）
+*/
 // function popupplus(targetCopm,options={},marker){
 // 	console.log(marker,'mmmm')
 // 	let popEl = null;
@@ -43,7 +49,9 @@ L.Marker.include({
 // 	}
 
 // }
-//方法2
+/*
+		方法2：点击marker时，把组件加载（用时再加载）
+*/
 function popupplus(targetCopm,options={},marker){
 	let popEl = null;
 	let firstCompRender = true
