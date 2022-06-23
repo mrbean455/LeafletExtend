@@ -9,14 +9,10 @@
 </template>
 
 <script>
-// import MakerDetailVue from './MakerDetail.vue';
  import MarkerDetail from './makerdetail.vue'
  import MarkerDetail1 from './markerdetail1.vue'
-// import { fireTooltip } from '../mixins/tooltipClickable.js'
-
 export default {
 components: { MarkerDetail ,MarkerDetail1 },
-  // mixins:[fireTooltip],
   props:{
     'map1':String,
     'map2':String
@@ -50,12 +46,7 @@ components: { MarkerDetail ,MarkerDetail1 },
       this.addMarker();
     },
     addMarker() {
-      var F = function(){
-        console.log('1111')
-      };
-      var f = new F();
-      console.log(f,'ffff')
-            const marker0 = this.L.marker([39.90000, 116.397411]).addTo(this.map);
+      const marker0 = this.L.marker([39.90000, 116.397411]).addTo(this.map);
       marker0.popupPlus(MarkerDetail,{
         props:{
           prop1:"CCCCC",
@@ -82,23 +73,7 @@ components: { MarkerDetail ,MarkerDetail1 },
         }
       })
       this.showMaker=true
-      // this.fireTooltip(marker,this.tooltipfuc);
-
-    },
-    testF(){
-      var test = new String('123')
     }
-
-    // fireTooltip1(target){
-      
-    //   let mytooltip = target.getTooltip()
-    //   console.log(mytooltip,'t')
-    //   mytooltip.on('click',this.tooltipfuc)
-      
-    // },
-    // tooltipfuc(){
-    //     console.log('++++')
-    // }
   },
   mounted() {
     this.initMap();
