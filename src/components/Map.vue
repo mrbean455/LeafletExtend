@@ -59,7 +59,7 @@ components: { MarkerDetail ,MarkerDetail1 },
           className:'testpop1',
         }
       })
-      const marker = this.L.marker([39.909186, 116.397411]).addTo(this.map);
+      const marker = this.L.marker([39.909186, 116.397411],{icon:L.divIcon({html:"<i class='el-icon-eleme diviconstyle'></i>",iconSize:[36,36]})}).addTo(this.map);
       marker.popupPlus(MarkerDetail,{
         props:{
           prop1:this.obj,
@@ -93,5 +93,9 @@ components: { MarkerDetail ,MarkerDetail1 },
     cursor: pointer;
     pointer-events: auto !important;
 
+}
+.diviconstyle{
+  font-size: 30px;
+  border: 1px solid #000;
 }
 </style>
