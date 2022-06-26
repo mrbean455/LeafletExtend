@@ -46,7 +46,10 @@ components: { MarkerDetail ,MarkerDetail1 },
       this.addMarker();
     },
     addMarker() {
-      const marker0 = this.L.marker([39.90000, 116.397411]).addTo(this.map);
+      //L.divIconPlus为自定义封装的功能
+      const marker0 = this.L.marker([39.90000, 116.397411],{icon:this.L.divIconPlus({iconUrl:'/zhaoxiang.png',size:26})}).addTo(this.map);
+
+      //添加popup
       marker0.popupPlus(MarkerDetail,{
         props:{
           prop1:"CCCCC",
@@ -59,7 +62,12 @@ components: { MarkerDetail ,MarkerDetail1 },
           className:'testpop1',
         }
       })
-      const marker = this.L.marker([39.909186, 116.397411],{icon:L.divIcon({html:"<i class='el-icon-eleme diviconstyle'></i>",iconSize:[36,36]})}).addTo(this.map);
+      // const marker = this.L.marker([39.909186, 116.397411],{icon:divIconPlus({iconUrl:'./zhaoxiang.png'})}).addTo(this.map);
+
+      //L.divIconPlus为自定义封装的功能
+      const marker = this.L.marker([39.909186, 116.397411],{icon:this.L.divIconPlus({iconUrl:'/zhaoxiang.png',size:30,iconClass:'el-icon-star-on'})}).addTo(this.map);
+
+      //添加popup
       marker.popupPlus(MarkerDetail,{
         props:{
           prop1:this.obj,

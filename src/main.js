@@ -5,6 +5,7 @@ import ElementUI from 'element-ui'
 import "element-ui/lib/theme-chalk/index.css"
 
 import './leafletExtend/popupPlus'
+import "./leafletExtend/divIconPlus"
 //引入leaflet
 import L from 'leaflet'
 //引入leaflet的css样式
